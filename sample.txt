@@ -1,0 +1,9 @@
+FastAPI is a modern Python web framework for building APIs.
+
+FastAPI supports asynchronous programming.
+
+Pydantic is used for data validation and serialization.
+
+RAG stands for Retrieval-Augmented Generation.
+
+RAG retrieves relevant information from a knowledge base before sending context to an LLM.
