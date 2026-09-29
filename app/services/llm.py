@@ -8,7 +8,7 @@ from google.genai import types
 load_dotenv(override=True)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
@@ -56,7 +56,7 @@ Answer:
             )
 
             if attempt < max_retries - 1:
-                await asyncio.sleep(2 ** attempt)
+                await asyncio.sleep(5 * (attempt + 1))
 
     return (
         "The document was retrieved successfully, "
